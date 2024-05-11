@@ -43,7 +43,7 @@
       display: flex;
       flex-flow: column wrap;
       justify-content: space-between;
-      width: 100%;
+      width: 100vh;
       max-width: none; /* Remove max-width */
       margin: 0; /* Remove margin to fit full screen */
       height: 100vh; /* Set height to 100% of viewport height */
