@@ -44,16 +44,16 @@
       flex-flow: column wrap;
       justify-content: space-between;
       width: 100%;
-      max-width: 400px;
-      margin: 25px 10px;
-      height: 100%
+      max-width: none; /* Remove max-width */
+      margin: 0; /* Remove margin to fit full screen */
+      height: 100vh; /* Set height to 100% of viewport height */
       border: var(--border);
       border-radius: 5px;
       background: var(--msger-bg);
       box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-    
   }
 }
+
 
 :root {
   --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
