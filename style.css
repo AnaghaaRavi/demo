@@ -16,6 +16,9 @@
       border-radius: 15 px;
       transform-origin: bottom right;
       transition: all 0.1s ease;
+      position: fixed;
+      right: 20px;
+      bottom:20px;
     
   }
 }
@@ -71,10 +74,37 @@
 @media only screen and (max-width: 480px) {
   .msger {
     /* Mobile styles */
-    margin: 0; /* Adjust margin */
-    border-radius: 0; /* Remove border radius */
-    box-shadow: none; /* Remove box shadow */
-    height: 100vh; /* Set height to full viewport height */
+      /* display:inline;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 100%;
+      width: calc(100% - 50px);
+      height:100vh;
+      margin: 25px 10px;
+      height: calc(100% - 50px);
+      border: var(--border);
+      border-radius: 5px;
+      background: var(--msger-bg);
+      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+      border-radius: 15 px;
+      transform-origin: bottom right;
+      transition: all 0.1s ease; */
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      margin: 25px 10px;
+      height: 100%;
+      /* border: var(--border); */
+      border-radius: 5px;
+      background: var(--msger-bg);
+      /* box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2); */
+      position: inherit;
+      
+  }
+  .msger-inputarea{
+    width: 100%;
+    max-width: 400px;
   }
 }
 
