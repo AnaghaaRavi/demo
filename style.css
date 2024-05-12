@@ -2,7 +2,29 @@
 @media only screen and (min-width: 768px) {
   .msger {
       /* Desktop styles */
-      display: flex;
+      display:flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 500px;
+      margin: 25px 10px;
+      height: calc(100% - 50px);
+      border: var(--border);
+      border-radius: 5px;
+      background: var(--msger-bg);
+      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+      border-radius: 15 px;
+      transform-origin: bottom right;
+      transition: all 0.1s ease;
+    
+  }
+}
+
+/* CSS for tablets and landscape mobiles */
+/* @media only screen and (max-width: 768px) {
+  .msger { */
+      /* Tablet styles */
+      /* display: flex;
       flex-flow: column wrap;
       justify-content: space-between;
       width: 100%;
@@ -15,13 +37,13 @@
       box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
     
   }
-}
+} */
 
-/* CSS for tablets and landscape mobiles */
-@media only screen and (max-width: 768px) {
-  .msger {
-      /* Tablet styles */
-      display: flex;
+/* CSS for portrait mobiles */
+/* @media only screen and (max-width: 480px) {
+  .msger { */
+      /* Mobile styles */
+      /* display: flex;
       flex-flow: column wrap;
       justify-content: space-between;
       width: 100%;
@@ -33,26 +55,31 @@
       background: var(--msger-bg);
       box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
     
+  }
+} */
+
+
+/* CSS for tablets and landscape mobiles */
+@media only screen and (max-width: 768px) {
+  .msger {
+    /* Tablet styles */
+    margin: 25px 0; /* Adjust margin */
   }
 }
 
 /* CSS for portrait mobiles */
 @media only screen and (max-width: 480px) {
   .msger {
-      /* Mobile styles */
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  width: calc(100% - 20px); /* Adjust width */
-  height: calc(100vh - 20px); /* Adjust height */
-  margin: 10px; /* Adjust margin */
-  border: var(--border);
-  border-radius: 5px;
-  background: var(--msger-bg);
-  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-    
+    /* Mobile styles */
+    margin: 0; /* Adjust margin */
+    border-radius: 0; /* Remove border radius */
+    box-shadow: none; /* Remove box shadow */
+    height: 100vh; /* Set height to full viewport height */
   }
 }
+
+
+
 
 :root {
   --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -83,7 +110,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.msger {
+/* .msger {
   display:flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -99,7 +126,7 @@ body {
   transform-origin: bottom right;
   transition: all 0.1s ease;
   
-}
+} */
 .msger-popup{
   display: none;
   flex-flow: column wrap;
