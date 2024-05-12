@@ -24,8 +24,8 @@
   <!-- partial:index.partial.html -->
   <div class="chat-icon" id="chat-icon" onclick="toggleChat()">
     <div class="chat-content" id="chat-content">
-        <p>Hi, I'm Ana! You are not placed i knw , Need help with placements? </p>
-          <img id="chat-img" src="https://openclipart.org/image/800px/308327" alt="Chat Icon">
+        <p>Hey, it's Ana! Want some assistance navigating the world of placements? </p>
+          <img id="chat-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPEeE-kQ7XJgf-uYve-b1BQetJaisVs81Nw&s" alt="Chat Icon">
     </div>
 </div>
   <div class="msger-popup" id="msger-popup">
@@ -48,7 +48,7 @@
             </div>
 
             <div class="msg-text">
-              Hey,I Am Ana.<br>
+              Hey,I'm Ana.<br>
               Lets navigate the maze of placements together! How can i help You? 😄<br> Type menu to select
               options<br><br>
               <strong>Select an option:</strong>
@@ -94,7 +94,7 @@
       if (selectedOption === 1) {
         msgerInput.placeholder = "Enter message";
         fileInput.style.display = "none";
-        appendMessage(BOT_NAME, BOT_IMG, "left", "Let me help you with the placement preparation ,i can help you with providing previous years placement stats such as No of students placed in which company and the comapnies visited our college and i can also assist you with placement preparation for particular company ,building your resume ");
+        appendMessage(BOT_NAME, BOT_IMG, "left", "I'm here to support you with your placement preparation. I can provide you with past placement statistics, including the number of students placed in various companies and the list of companies that have visited our college. Additionally, I can assist you in preparing for specific company placements.");
       }
       //   if (selectedOption === 2 ) {
       //     msgerInput.placeholder = "Enter message";
@@ -105,7 +105,7 @@
         msgerInput.placeholder = "Enter JD or Job Role";
         fileInput.style.display = "block";
         fileInput.setAttribute("required", "required");
-        appendMessage(BOT_NAME, BOT_IMG, "left", "Paste Job Description or Job Role and attach your resume <strong>(pdf format)</strong> only to get to know how strong is your resume for particular job role or job description");
+        appendMessage(BOT_NAME, BOT_IMG, "left", "Please share the job description or job role along with your resume in <strong>PDF format</strong> for a personalized assessment of your fit for the role.");
         // Make file input required
       } else {
         fileInput.removeAttribute("required"); // Remove required attribute if option is not 3
