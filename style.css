@@ -71,7 +71,7 @@
 }
 
 /* CSS for portrait mobiles */
-@media only screen and (max-width: 480px) {
+@media only screen {
   .msger {
     /* Mobile styles */
       /* display:inline;
