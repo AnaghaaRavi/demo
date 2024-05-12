@@ -1,4 +1,86 @@
+/* CSS for desktop */
+@media only screen and (min-width: 768px) {
+  .msger {
+      /* Desktop styles */
+      display:flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 500px;
+      margin: 25px 10px;
+      height: calc(100% - 50px);
+      border: var(--border);
+      border-radius: 5px;
+      background: var(--msger-bg);
+      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+      border-radius: 15 px;
+      transform-origin: bottom right;
+      transition: all 0.1s ease;
+      position: fixed;
+      right: 20px;
+      bottom:20px;
+    
+  }
+  .msger-inputarea {
+    display: flex;
+    padding: 10px;
+    border-top: var(--border);
+    background: #eee;
+    width: 500px;
+   
+    
+  }
+  .msger-inputarea * {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    border-radius: 20px;
+  }
 
+
+}
+
+
+/* CSS for tablets and landscape mobiles */
+@media only screen and (max-width: 768px) {
+  .msger {
+    /* Tablet styles */
+    margin: 25px 0; /* Adjust margin */
+  }
+}
+
+/* CSS for portrait mobiles */
+@media only screen and (max-width:device-width) {
+  .msger {
+    /* Mobile styles */
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: var(--msger-bg);
+  }
+  .msger-inputarea {
+    display: flex;
+    padding: 10px;
+    border-top: var(--border);
+    background: #eee;
+    width: 100px;
+    max-width: device-width;
+   
+    
+  }
+  .msger-inputarea * {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    border-radius: 20px;
+  }
+
+ 
+}
 
 :root {
   --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -29,7 +111,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.msger {
+/* .msger {
   display:flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -45,7 +127,7 @@ body {
   transform-origin: bottom right;
   transition: all 0.1s ease;
   
-}
+} */
 .msger-popup{
   display: none;
   flex-flow: column wrap;
@@ -163,7 +245,7 @@ body {
   padding: 10px;
   border-top: var(--border);
   background: #eee;
-  width: 500px;
+  width: device-width;
  
   
 }
@@ -205,8 +287,8 @@ body {
   align-items: center;
 }
 .msger-inputarea button:hover {
-  color: rgb(234, 231, 234); /* Change color on hover */
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);/*Change background color on hover */
+  color: rgb(234, 231, 234); 
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 } 
 .msg-text button{
   color: #ffffff; /* Change color on hover */
