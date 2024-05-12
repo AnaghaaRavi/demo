@@ -36,39 +36,15 @@
 @media only screen and (max-width:480px) {
   .msger {
     /* Mobile styles */
-      /* display:inline;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      width: 100%;
-      width: calc(100% - 50px);
-      height:100vh;
-      margin: 25px 10px;
-      height: calc(100% - 50px);
-      border: var(--border);
-      border-radius: 5px;
-      background: var(--msger-bg);
-      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-      border-radius: 15 px;
-      transform-origin: bottom right;
-      transition: all 0.1s ease; */
-      flex-flow: column wrap;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 350px;
-      /* margin: 25px 10px; */
-      height: 100%;
-      /* border: var(--border); */
-      /* border-radius: 5px; */
-      background: var(--msger-bg);
-      /* box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2); */
-      position: inherit;
-      
-      
-  }
-  .msger-inputarea{
+    flex-flow: column wrap;
+    justify-content: space-between;
     width: 100%;
-    max-width: 480px;
-    
+    height: 100%;
+    background: var(--msger-bg);
+  }
+  .msger-inputarea {
+    width: 100%;
+    max-width: 480px; /* Adjust max-width as needed */
   }
 }
 
