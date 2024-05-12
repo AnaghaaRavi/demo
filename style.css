@@ -23,44 +23,6 @@
   }
 }
 
-/* CSS for tablets and landscape mobiles */
-/* @media only screen and (max-width: 768px) {
-  .msger { */
-      /* Tablet styles */
-      /* display: flex;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 400px;
-      margin: 25px 10px;
-      height: calc(100% - 50px);
-      border: var(--border);
-      border-radius: 5px;
-      background: var(--msger-bg);
-      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-    
-  }
-} */
-
-/* CSS for portrait mobiles */
-/* @media only screen and (max-width: 480px) {
-  .msger { */
-      /* Mobile styles */
-      /* display: flex;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 400px;
-      margin: 25px 10px;
-      height: calc(100% - 50px);
-      border: var(--border);
-      border-radius: 5px;
-      background: var(--msger-bg);
-      box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
-    
-  }
-} */
-
 
 /* CSS for tablets and landscape mobiles */
 @media only screen and (max-width: 768px) {
@@ -71,7 +33,7 @@
 }
 
 /* CSS for portrait mobiles */
-@media only screen {
+@media only screen and (max-width:480px) {
   .msger {
     /* Mobile styles */
       /* display:inline;
@@ -92,23 +54,23 @@
       flex-flow: column wrap;
       justify-content: space-between;
       width: 100%;
-/*       max-width: 400px; */
-      margin: 25px 10px;
+      max-width: 350px;
+      /* margin: 25px 10px; */
       height: 100%;
       /* border: var(--border); */
-      border-radius: 5px;
+      /* border-radius: 5px; */
       background: var(--msger-bg);
       /* box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2); */
       position: inherit;
       
+      
   }
   .msger-inputarea{
     width: 100%;
-/*     max-width: 400px; */
+    max-width: 480px;
+    
   }
 }
-
-
 
 
 :root {
@@ -140,7 +102,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* .msger {
+.msger {
   display:flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -156,7 +118,7 @@ body {
   transform-origin: bottom right;
   transition: all 0.1s ease;
   
-} */
+}
 .msger-popup{
   display: none;
   flex-flow: column wrap;
