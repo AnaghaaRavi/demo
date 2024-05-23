@@ -7,12 +7,12 @@
   <title>Placement ChatBot</title>
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon"
     href="https://static.vecteezy.com/system/resources/previews/010/927/083/original/chatbot-icon-on-white-background-online-support-service-bot-sign-chat-bot-sign-for-support-service-concept-flat-style-vector.jpg"
     type="image/jpg">
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style1.css') }}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet"
@@ -25,13 +25,12 @@
   <!-- partial:index.partial.html -->
   <div class="chat-icon" id="chat-icon" onclick="toggleChat()">
     <div class="chat-content" id="chat-content">
-        <p>Hey, it's Ana! Want some assistance navigating the world of placements? </p>
-          <img id="chat-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPEeE-kQ7XJgf-uYve-b1BQetJaisVs81Nw&s" alt="Chat Icon">
+        <p>Hey, it's Ana, your placement whiz. Ready to ace it? </p>
+          <img id="chat-img" src="https://i.pinimg.com/564x/3a/87/9f/3a879f07d46ec94c28e7ca9e6f111790.jpg" alt="Chat Icon">
     </div>
 </div>
   <div class="msger-popup" id="msger-popup">
     <section class="msger">
-    
       <header class="msger-header">
         <div class="msger-header-title">
           <i class="fas fa-graduation-cap"></i> Placement ChatBot  <i class="fas fa-graduation-cap"></i>
@@ -41,8 +40,6 @@
 
       <main class="msger-chat">
         <div class="msg left-msg">
-
-
           <div class="msg-bubble">
             <div class="msg-info">
               <div class="msg-info-name">Ana</div>
@@ -51,8 +48,7 @@
 
             <div class="msg-text">
               Hey,I'm Ana.<br>
-              Lets navigate the maze of placements together! How can i help You? 😄<br> Type menu to select
-              options<br><br>
+              Let's navigate the maze of placements together! How can I help you? 😊<br><br>
               <strong>Select an option:</strong>
               <br>
               <!-- <button onclick="selectOption(1)">1. Previous Placement Related Queries</button><br> -->
@@ -67,11 +63,10 @@
       <form class="msger-inputarea" method="post" enctype="multipart/form-data">
         <input type="text" class="msger-input" name="textInput" id="textInput" placeholder="Enter your message..."
           required>
-        <input type="file"  name="fileInput" id="fileInput" style="display: none;" accept=".pdf">
+        <input type="file" name="fileInput" id="fileInput" style="display: none;" accept=".pdf">
         <button type="submit" class="msger-send-btn"><i class="fas fa-paper-plane fa-2x"></i></button>
 
       </form>
-    
     </section>
   </div>
   <!-- partial -->
@@ -97,13 +92,8 @@
       if (selectedOption === 1) {
         msgerInput.placeholder = "Enter message";
         fileInput.style.display = "none";
-        appendMessage(BOT_NAME, BOT_IMG, "left", "I'm here to support you with your placement preparation. I can provide you with past placement statistics, including the number of students placed in various companies and the list of companies that have visited our college. Additionally, I can assist you in preparing for placements to get the dream join you desire.");
+        appendMessage(BOT_NAME, BOT_IMG, "left", "I'm here to support you with your placement preparation. I can provide you with previous year placement statistics, answer queries like, the number of students placed in various companies and the list of companies that have visited our college and so on. Additionally, I can assist you in preparing for placements to get the dream job you desire.");
       }
-      //   if (selectedOption === 2 ) {
-      //     msgerInput.placeholder = "Enter message";
-      //     fileInput.style.display = "none";
-      //     appendMessage(BOT_NAME, BOT_IMG, "left", "Try Questions like: <br> 1. How to prepare for placements ? <br> 2.Can you share tips for resume writing? <br><strong> NOTE: Only placement related queries</strong>");
-      //   }
       if (selectedOption === 2) {
         msgerInput.placeholder = "Enter JD or Job Role";
         fileInput.style.display = "block";
@@ -190,7 +180,7 @@
         msgerInput.placeholder = "Enter message";
         fileInput.style.display = "none";
         // Show the initial message with options
-        appendMessage(BOT_NAME, BOT_IMG, "left", "<br><strong>Select an option:<strong><br><button onclick=\"selectOption(1)\">1. Placement Preparation</button><br><button onclick=\"selectOption(2)\">2. Resume Parser</button>");
+        appendMessage(BOT_NAME, BOT_IMG, "left", "<strong>Select an option:<strong><br><button onclick=\"selectOption(1)\">1. Placement Preparation</button><br><button onclick=\"selectOption(2)\">2. Resume Parser</button>");
         return;
       }
 
@@ -200,7 +190,7 @@
         msgerInput.placeholder = "Enter a message";
         fileInput.style.display = "none";
         // Show the initial message with options
-        appendMessage(BOT_NAME, BOT_IMG, "left", "Goodbye! Feel free to return anytime if you have more questions. Have a great day!");
+        appendMessage(BOT_NAME, BOT_IMG, "left", "Goodbye! Feel free to return anytime if you have more questions. Have a great day! 😊");
         return;
       }
       appendTypingIndicator(BOT_NAME, "left", "Typing");
@@ -361,28 +351,36 @@
 
       return `${h.slice(-2)}:${m.slice(-2)}`;
     }
+    function toggleChat() {
+    var chatPopup = document.getElementById("msger-popup");
+    var chatIcon = document.getElementById("chat-icon");
 
+    if (chatPopup.classList.contains("show")) {
+        chatPopup.classList.remove("show");
+        chatIcon.style.opacity = "1"; // Show chat icon with transition
+        setTimeout(function() {
+            chatPopup.style.display = "none";
+            chatIcon.style.display = "block"; // Ensure chat icon is displayed after popup is hidden
+        }, 400); // Match the duration of the transition
+    } else {
+        chatPopup.style.display = "flex";
+        setTimeout(function() {
+            chatPopup.classList.add("show");
+        }, 10); // Small delay to allow display:flex to take effect
+        chatIcon.style.opacity = "0"; // Hide chat icon with transition
+        setTimeout(function() {
+            chatIcon.style.display = "none";
+        }, 400); // Match the duration of the transition
+    }
+}
 
-  function toggleChat() {
-            var chatPopup = document.getElementById("msger-popup");
-            var chatIcon = document.getElementById("chat-icon");
-            if (chatPopup.style.display === "none" || chatPopup.style.display === "") {
-                chatPopup.style.display = "block";
-                chatIcon.style.display = "none"; // Hide chat icon when chat popup is displayed
-            } else {
-                chatPopup.style.display = "none";
-                chatIcon.style.display = "block"; // Show chat icon when chat popup is hidden
-            }
-        }
-
-        window.onload = function() {
+window.onload = function() {
     setTimeout(function() {
-        var chatContent = document.getElementById('chat-content');
-        chatContent.style.animation = 'fade-in 1s ease';
-        chatContent.style.opacity = 1;
-        chatContent.style.visibility = 'visible';
-    }, 3000); // Adjust the delay (in milliseconds) as needed
+        var chatContent = document.querySelector('.chat-content');
+        chatContent.classList.add('show');
+    }, 2500); // Adjust the delay (in milliseconds) as needed
 };
+
   </script>
 
 </body>
